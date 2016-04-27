@@ -112,7 +112,7 @@ class DayView extends CheckedTextView {
         if (drawable == null) {
             this.selectionDrawable = null;
         } else {
-            this.selectionDrawable = new SquareDrawable(drawable.getConstantState().newDrawable(getResources()));
+            this.selectionDrawable = drawable;//new SquareDrawable(drawable.getConstantState().newDrawable(getResources()));
         }
         regenerateBackground();
     }
@@ -124,7 +124,7 @@ class DayView extends CheckedTextView {
         if (drawable == null) {
             this.customBackground = null;
         } else {
-            this.customBackground = drawable.getConstantState().newDrawable(getResources());
+            this.customBackground = drawable;//drawable.getConstantState().newDrawable(getResources());
         }
         invalidate();
     }
